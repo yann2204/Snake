@@ -13,7 +13,6 @@ int main() {
 		aff.affiche();
 		refresh();
 		aff.run();
-		sleep(1);
 		clear();
 	}
 	endwin();

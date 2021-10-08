@@ -7,10 +7,12 @@
 #pragma once
 
 
+
 class Affichage : public Serpent{
 	private:
 		int height,width;
 		char * tab;
+
 	public:
 		Affichage(int m,int n) : Serpent(m,n),height(m), width(n), tab(new char[height*width]) {
 			for(int i =0;i<height;i++) {
@@ -20,11 +22,15 @@ class Affichage : public Serpent{
 					else SetElement(i,j,' ');
 				}
 			}
+			Add_Food();
 			print_snake();
 		}
 		void affiche();
+		void Add_Food();
 		void print_snake();
 		void SetElement(int i, int j,char c);
 		char GetElement(int i, int j);
-		void run() override;
+		void run();
+		void ClearTab();
+		void GameOver();
 };
