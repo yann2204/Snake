@@ -8,7 +8,7 @@
 
 int main() {
 	initscr();
-	Affichage aff = Affichage(52,210);
+	Affichage aff = Affichage(35,77);
 	while(1) {
 		aff.affiche();
 		refresh();
